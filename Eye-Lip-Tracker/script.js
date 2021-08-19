@@ -68,7 +68,7 @@ faceMesh.onResults(onResults);
 // options.
 new controls.ControlPanel(controlsElement, {
     selfieMode: true,
-    maxNumFaces: 1,
+    maxNumFaces: 2,
     minDetectionConfidence: 0.5,
     minTrackingConfidence: 0.5,
 })
@@ -99,24 +99,6 @@ new controls.ControlPanel(controlsElement, {
                 images: [],
             },
         }),
-        // new controls.Slider({
-        //     title: 'Max Number of Faces',
-        //     field: 'maxNumFaces',
-        //     range: [1, 4],
-        //     step: 1
-        // }),
-        // new controls.Slider({
-        //     title: 'Min Detection Confidence',
-        //     field: 'minDetectionConfidence',
-        //     range: [0, 1],
-        //     step: 0.01
-        // }),
-        // new controls.Slider({
-        //     title: 'Min Tracking Confidence',
-        //     field: 'minTrackingConfidence',
-        //     range: [0, 1],
-        //     step: 0.01
-        // }),
     ])
     .on((x) => {
         const options = x;
