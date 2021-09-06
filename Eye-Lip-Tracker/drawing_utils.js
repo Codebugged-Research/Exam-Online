@@ -138,7 +138,6 @@
                 f = 0;
             b = q(b);
             for (var g = b.next(); !g.done; g = b.next()) {
-
                 var k = g.value;
                 a.beginPath();
                 g = c[k[0]];
