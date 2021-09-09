@@ -32,8 +32,10 @@ function onResults(results) {
             // drawingUtils.drawConnectors(canvasCtx, landmarks, mpFaceMesh.FACEMESH_LEFT_EYE, { color: '#30FF30' });
             // drawingUtils.drawConnectors(canvasCtx, landmarks, mpFaceMesh.FACEMESH_LEFT_EYEBROW, { color: '#30FF30' });
             // drawingUtils.drawConnectors(canvasCtx, landmarks, mpFaceMesh.FACEMESH_FACE_OVAL, { color: '#E0E0E0' });
-            console.log(mpFaceMesh.FACEMESH_LIPS);
-            drawingUtils.drawConnectors(canvasCtx, landmarks, mpFaceMesh.FACEMESH_LIPS, { color: '#E0E0E0' });
+            // console.log(mpFaceMesh.FACEMESH_LIPS);
+            // console.log("LandMarks", landmarks);
+            
+            drawingUtils.drawConnectors(canvasCtx, landmarks, mpFaceMesh.FACEMESH_LIPS, { color: 'white' });
         }
     }
     canvasCtx.restore();

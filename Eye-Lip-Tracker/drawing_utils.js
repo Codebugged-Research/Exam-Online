@@ -126,7 +126,11 @@
             a.restore();
         }
     });
+
+    let counter = 0;
     v("drawConnectors", function (a, c, b, d) {
+        var distHolder = [];
+
         if (c && b) {
             d = x(d);
             a.save();
@@ -138,6 +142,10 @@
                 a.beginPath();
                 g = c[k[0]];
                 k = c[k[1]];
+
+                //calculate the distance between the points marked by landmarks
+                distHolder.push((g.y + k.y)/2);
+
                 g &&
                     k &&
                     (void 0 === g.visibility || g.visibility > d.visibilityMin) &&
@@ -147,8 +155,23 @@
                     a.moveTo(g.x * e.width, g.y * e.height), 
                     a.lineTo(k.x * e.width, k.y * e.height));
                 ++f;
+
                 a.stroke();
             }
+
+            var dist = distHolder[0] - distHolder[1];
+            console.log(dist);
+            if(dist > 0.010){
+                counter++;
+                console.log("Open mouth");
+            } else {
+                counter = 0;
+            }
+
+            // if(counter > 3) {
+            //     console.log("Open Mouth")
+            // }
+            
             a.restore();
         }
     });
