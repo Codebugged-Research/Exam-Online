@@ -92,6 +92,9 @@ $(document).ready(function(){
                   sleep(5000).then(() => {
                       stop_storing_points_variable(); // stop storing the prediction points
                       var past50 = webgazer.getStoredPoints(); // retrieve the stored points
+
+                      console.log("Stored Points", past50);
+                      
                       var precision_measurement = calculatePrecision(past50);
                       var accuracyLabel = "<a>Accuracy | "+precision_measurement+"%</a>";
                       document.getElementById("Accuracy").innerHTML = accuracyLabel; // Show the accuracy in the nav bar.
