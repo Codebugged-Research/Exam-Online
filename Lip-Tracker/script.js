@@ -43,9 +43,6 @@ new controls
 })
     .add([
     new controls.SourcePicker({
-        onSourceChanged: () => {
-            faceMesh.reset();
-        },
         onFrame: async (input, size) => {
             const aspect = size.height / size.width;
             let width, height;
