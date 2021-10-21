@@ -162,15 +162,10 @@
             var dist = distHolder[0] - distHolder[1];
             console.log(dist);
             if(dist > 0.010){
-                counter++;
                 console.log("Open mouth");
             } else {
                 counter = 0;
             }
-
-            // if(counter > 3) {
-            //     console.log("Open Mouth")
-            // }
             
             a.restore();
         }
