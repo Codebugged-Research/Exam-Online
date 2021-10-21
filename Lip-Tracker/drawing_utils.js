@@ -160,7 +160,6 @@
             }
 
             var dist = distHolder[0] - distHolder[1];
-            console.log(dist);
             if(dist > 0.010){
                 console.log("Open mouth");
             } else {
